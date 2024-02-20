@@ -1,5 +1,5 @@
 # Use Python 3.11.8 slim version as the base image
-FROM python:3.11.8-slim
+FROM python:3.11-slim
 
 # Use connection in RAILWAYS Deployment tool
 ARG FLASK_DEBUG
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
         && rm -rf /var/lib/apt/lists/*
 
 # Install Poetry
-RUN pip3 install poetry
+RUN pip install poetry
 
 # Set environment variables for Poetry
 ENV POETRY_NO_INTERACTION=1 \
