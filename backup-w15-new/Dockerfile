@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
         && rm -rf /var/lib/apt/lists/*
 
 # Install Poetry
-RUN pip install poetry
+RUN pip3 install poetry
 
 # Set environment variables for Poetry
 ENV POETRY_NO_INTERACTION=1 \
