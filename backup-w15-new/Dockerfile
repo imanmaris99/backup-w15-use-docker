@@ -1,6 +1,15 @@
 # Use Python 3.11.8 slim version as the base image
 FROM python:3.11.8-slim
 
+ARG FLASK_DEBUG
+ARG FLASK_ENV
+ARG DATABASE_TYPE
+ARG DATABASE_NAME
+ARG DATABASE_USER
+ARG DATABASE_HOST
+ARG DATABASE_PORT
+ARG DATABASE_PASSWORD
+
 # Update the package lists and install necessary dependencies
 RUN apt-get update && apt-get install -y \
         libpq-dev \
