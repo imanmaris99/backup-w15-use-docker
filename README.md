@@ -1,5 +1,5 @@
 
-# Assignment Week-15 (Python + Poetry + Flask + SQLAlchemy + Migrate + Pydantic + etc )
+# BACKUP-FILE-TUGAS WEEK15 (->PAKAI DOCKERFILE )
 
 
 ### Deployment with RAILWAY
@@ -8,14 +8,14 @@
 
 |       Tool     | Tool Website | My Link Website with Custom Domain |
 |----------------|--------------|------------------------------------|
-|<img width="55%" img src="https://railway.app/brand/logotype-light.png">|[RailWay](https://railway.com/) |[https://joyful-genie-6cd939.netlify.app/](coming soon.../)|
+|<img width="55%" img src="https://railway.app/brand/logotype-light.png">|[RailWay](https://railway.com/) |[Coming-soon](https://coming soon.com/)|
 
 
 ### Documentation API with POSTMAN
 
 **Result documentation API :**
 
-|       Tool     | Tool Website | My Link Website with Custom Domain |
+|       Tool     | Tool Website | My Link Documentation API with PostMan |
 |----------------|--------------|------------------------------------|
 |<img width="55%" img src="https://w7.pngwing.com/pngs/877/217/png-transparent-postman-logo-tech-companies-thumbnail.png">|[PostMAN](https://postman.com/) |[My API Documentation in here](https://documenter.getpostman.com/view/32137902/2sA2r81iox)|
 
