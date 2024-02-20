@@ -2,15 +2,6 @@
 # BACKUP-FILE-TUGAS WEEK15 (->PAKAI DOCKERFILE )
 
 
-### Deployment with RAILWAY
-
-**Result deployment use dockerfile packages:**
-
-|       Tool     | Tool Website | My Link Website with Custom Domain |
-|----------------|--------------|------------------------------------|
-|<img width="55%" img src="https://railway.app/brand/logotype-light.png">|[RailWay](https://railway.com/) |[Coming-soon](https://coming soon.com/)|
-
-
 ### Documentation API with POSTMAN
 
 **Result documentation API :**
