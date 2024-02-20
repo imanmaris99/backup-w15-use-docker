@@ -1,5 +1,5 @@
 # Use Python 3.11.8 slim version as the base image
-FROM python:3.11-slim
+FROM python:3.11.8-slim
 
 # Use connection in RAILWAYS Deployment tool
 ARG FLASK_DEBUG
