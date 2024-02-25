@@ -1,12 +1,28 @@
 
 from app.models.animal import Animal
+from app.models.enclosure import Enclosure
 from app.utils.database import db
+
+class Enclosure_repo():
+    def get_enclosures(self):
+        enclosures = Enclosure.query.all()
+        return enclosures
+    
+    def create_enclosure(self, enclosure):
+        db.session.add(enclosure)
+        db.session.commit()
+        return enclosure
 
 class Animal_repo():
     def get_animals(self):
         animals = Animal.query.all()
         return animals
-    
+    #---update terbaru-- 
+    def create_animal(self, animal):
+        db.session.add(animal)
+        db.session.commit()
+        return animal
+    # ------------------
     def search_animals(self, species):
         animals = Animal.query.filter(Animal.species.like(f"%{species}%")).all()
         return animals
@@ -29,5 +45,12 @@ class Animal_repo():
         animal_obj.gender = animal.gender
         animal_obj.special_requirement = animal.special_requirement
         
+        db.session.commit()
+        return animal_obj
+    
+    def delete_animal(self, id):
+        animal_obj = Animal.query.get(id)
+
+        db.session.delete(animal_obj)
         db.session.commit()
         return animal_obj

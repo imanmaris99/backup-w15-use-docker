@@ -1,6 +1,24 @@
-
+from app.models.animal import Animal
 from app.repositories.animal_repo import Animal_repo
+from app.repositories.animal_repo import Enclosure_repo
+from app.models.enclosure import Enclosure
 
+class Enclosure_service:
+    def __init__(self):
+        self.enclosure_repo = Enclosure_repo()
+
+    def get_enclosures(self):
+        enclosures = self.enclosure_repo.get_enclosures()
+        return [enclosure.as_dict() for enclosure in enclosures]
+    
+    def create_enclosure(self, enclosure_data_dto):
+        enclosure = Enclosure()
+
+        enclosure.location = enclosure_data_dto.location
+
+        created_enclosure = self.enclosure_repo.create_enclosure(enclosure)
+        return created_enclosure.as_dict()
+    
 class Animal_service:
     def __init__(self):
         self.animal_repo = Animal_repo()
@@ -8,7 +26,18 @@ class Animal_service:
     def get_animals(self):
         animals = self.animal_repo.get_animals()
         return [animal.as_dict() for animal in animals]
+# ------uppdate terbaru------
+    def create_animal(self, animal_data_dto):
+        animal = Animal()
 
+        animal.species = animal_data_dto.species
+        animal.age = animal_data_dto.age
+        animal.gender = animal_data_dto.gender
+        animal.special_requirement = animal_data_dto.special_requirement
+
+        created_animal = self.animal_repo.create_animal(animal)
+        return created_animal.as_dict()
+# -----------------------------  
     def search_animals(self, species):
         animals = self.animal_repo.search_animals(species)
         return [animal.as_dict() for animal in animals]
@@ -21,3 +50,11 @@ class Animal_service:
     def update_animal(self, id, animal_data_dto):
         updated_animal = self.animal_repo.update_animal(id, animal_data_dto)
         return updated_animal.as_dict()
+    
+    def delete_animal(self, id):
+        animal = Animal.query.get(id)
+        if not animal:
+            return "Animal not available"
+        
+        delete_animal = self.animal_repo.delete_animal(id)
+        return delete_animal.as_dict()
